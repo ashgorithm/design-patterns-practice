@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.Singleton.SingletonCache;
+import org.example.builder.Person;
+import org.example.builder.PersonBuilder;
 
 public class Main {
 
@@ -17,7 +19,22 @@ public class Main {
 
 //        SingletonCache singletonCache2 = globalCache.clone()
     }
+
+    private static void testBuilder(){
+        Person person = new PersonBuilder("John", "Doe").setEmail("johndoe@gmail.com").setFacebookId("johndoe123").setCountry("USA").getResult();
+
+        System.out.println(person);
+
+        Person joseph = new PersonBuilder("joseph", "Smith").setEmail("joesph@gmail.com").getResult();
+
+        System.out.println(joseph);
+
+
+    }
     public static void main(String[] args) {
-        testSingleton();
+
+
+//        testSingleton();
+        testBuilder();
     }
 }
