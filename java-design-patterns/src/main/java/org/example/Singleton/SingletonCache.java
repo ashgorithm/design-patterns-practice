@@ -24,7 +24,7 @@ public class SingletonCache<K,V> implements Serializable, Cloneable {
     /**
      * To prevent Object to be created by serialization / deserialization
      */
-    protected Object readResolve() { return singletonCache; }
+    protected Object readResolve() { return getInstance(); }
 
 
     /**

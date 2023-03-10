@@ -4,7 +4,7 @@ import org.example.Singleton.SingletonCache;
 
 public class Main {
 
-    private void testSingleton(){
+    private static void testSingleton(){
         SingletonCache globalCache = SingletonCache.getInstance();
         globalCache.setValue("color", "blue");
         System.out.println(globalCache.getValue("color"));
@@ -18,6 +18,6 @@ public class Main {
 //        SingletonCache singletonCache2 = globalCache.clone()
     }
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        testSingleton();
     }
 }
