@@ -3,7 +3,7 @@ package org.example.builder;
 public class PersonBuilder {
 
     private String firstName;
-    private  String lastName;
+    private String lastName;
     private String email = "";
     private String phoneNumber = "";
     private String address = "";
